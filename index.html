@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Orvalho – cafeteria fictícia. Projeto de estudo de landing page responsiva.">
+  <title>Café Orvalho | Cafés especiais</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#conteudo" class="pular">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="topo__interno container">
+      <a href="#" class="logo">Café <span>Orvalho</span></a>
+      <button class="menu-botao" id="menu-botao" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="menu" id="menu" aria-label="Principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#depoimentos">Clientes</a>
+        <a href="#contato" class="botao botao--pequeno">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero">
+      <div class="container hero__interno">
+        <div class="hero__texto">
+          <p class="selo">Torra artesanal desde 2015</p>
+          <h1>O café que faz a sua manhã valer a pena.</h1>
+          <p>Grãos selecionados de pequenos produtores, torrados toda semana e servidos do jeito que você gosta.</p>
+          <div class="hero__acoes">
+            <a href="#cardapio" class="botao">Ver cardápio</a>
+            <a href="#contato" class="botao botao--contorno">Onde estamos</a>
+          </div>
+        </div>
+        <div class="hero__arte" aria-hidden="true">
+          <div class="xicara">
+            <div class="xicara__vapor"><span></span><span></span><span></span></div>
+            <div class="xicara__corpo"></div>
+            <div class="xicara__alca"></div>
+            <div class="xicara__pires"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao" id="sobre">
+      <div class="container">
+        <h2 class="secao__titulo">Por que o Orvalho?</h2>
+        <div class="cards">
+          <article class="card revelar">
+            <div class="card__icone" aria-hidden="true">🌱</div>
+            <h3>Origem rastreada</h3>
+            <p>Sabemos de qual fazenda vem cada grão e pagamos um preço justo ao produtor.</p>
+          </article>
+          <article class="card revelar">
+            <div class="card__icone" aria-hidden="true">🔥</div>
+            <h3>Torra semanal</h3>
+            <p>Torramos em pequenos lotes para garantir aroma e frescor em todas as xícaras.</p>
+          </article>
+          <article class="card revelar">
+            <div class="card__icone" aria-hidden="true">☕</div>
+            <h3>Baristas de verdade</h3>
+            <p>Equipe treinada para preparar do espresso ao coado com o mesmo cuidado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--escura" id="cardapio">
+      <div class="container">
+        <h2 class="secao__titulo">Cardápio</h2>
+        <div class="abas" role="tablist" aria-label="Categorias do cardápio">
+          <button role="tab" class="aba ativa" aria-selected="true" data-categoria="cafes">Cafés</button>
+          <button role="tab" class="aba" aria-selected="false" data-categoria="doces">Doces</button>
+          <button role="tab" class="aba" aria-selected="false" data-categoria="salgados">Salgados</button>
+        </div>
+        <ul class="cardapio" id="lista-cardapio" role="tabpanel"></ul>
+      </div>
+    </section>
+
+    <section class="secao" id="depoimentos">
+      <div class="container">
+        <h2 class="secao__titulo">O que dizem os clientes</h2>
+        <p class="aviso">Depoimentos ilustrativos (projeto fictício).</p>
+        <div class="depoimentos">
+          <blockquote class="depoimento revelar">
+            <p>“Melhor coado da cidade. Virou parada obrigatória antes do trabalho.”</p>
+            <cite>— Cliente exemplo 1</cite>
+          </blockquote>
+          <blockquote class="depoimento revelar">
+            <p>“Ambiente tranquilo e wi-fi rápido. Perfeito para estudar.”</p>
+            <cite>— Cliente exemplo 2</cite>
+          </blockquote>
+          <blockquote class="depoimento revelar">
+            <p>“O pão de queijo com o cappuccino é uma combinação imbatível.”</p>
+            <cite>— Cliente exemplo 3</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao secao--destaque" id="contato">
+      <div class="container contato">
+        <div>
+          <h2 class="secao__titulo secao__titulo--esquerda">Venha nos visitar</h2>
+          <p>Endereço fictício, 123 – Centro</p>
+          <p>Segunda a sábado, das 7h às 19h</p>
+        </div>
+        <form class="newsletter" id="form-newsletter" novalidate>
+          <label for="email">Receba novidades e promoções</label>
+          <div class="newsletter__campo">
+            <input type="email" id="email" placeholder="seu@email.com" required>
+            <button type="submit" class="botao">Assinar</button>
+          </div>
+          <p class="newsletter__msg" id="msg-newsletter" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Café Orvalho é uma marca fictícia criada para estudo de front-end.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
